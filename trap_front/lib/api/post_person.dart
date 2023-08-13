@@ -24,14 +24,12 @@ class _PostPersonState extends State<PostPerson> {
       DropdownMenuItem(value: "T", child: Text("Piègeur")),
       DropdownMenuItem(value: "C", child: Text("Contrôlleur")),
     ];
-    print(rolesItems);
     return rolesItems;
   }
 
   void _savePerson() {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState!.save();
-      print(person);
       _postData(person);
     }
   }
